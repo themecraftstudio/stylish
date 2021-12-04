@@ -9,5 +9,8 @@
   ],
   "devDependencies": {
     "sass": "^1.44.0"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
