@@ -47,17 +47,19 @@ $-scroll-behavior: smooth;
 
 //region Classes
 @mixin classes {
-  @at-root button.no-style {
-    @include button;
-  }
-  @at-root ul.no-style, ol.no-style {
-    @include list;
-  }
-  @at-root input.no-style, select.no-style {
-    @include form-control;
-  }
-  @at-root fieldset.no-style {
-    @include form-fieldset;
+  @at-root {
+    button.no-style {
+      @include button;
+    }
+    ul.no-style, ol.no-style {
+      @include list;
+    }
+    input.no-style, select.no-style {
+      @include form-control;
+    }
+    fieldset.no-style {
+      @include form-fieldset;
+    }
   }
 }
 //endregion Classes

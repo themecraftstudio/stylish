@@ -4,11 +4,9 @@
   "author": "Ettore Del Negro <ettore@themecraft.studio> (https://themecraft.studio)",
   "license": "Unlicense",
   "repository": "git://github.com/themecraftstudio/stylish",
+  "registry":"https://npm.pkg.github.com",
   "type": "module",
   "devDependencies": {
     "sass": "^1.44.0"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
   }
 }

@@ -13,9 +13,7 @@
 }
 
 @mixin wip {
-  @if meta.function-exists('isWip') {
-    @if meta.call(meta.get-function('isWip')) {
-      @content;
-    }
+  @if meta.function-exists('isWip') and meta.call(meta.get-function('isWip')) {
+    @content;
   }
 }

@@ -24,7 +24,9 @@
  * Various utility classes.
  */
 @mixin classes {
-  @at-root body.noscroll {
+  @at-root body.no-scroll {
     overflow: hidden !important;
   }
+
+  @include reset.classes
 }
