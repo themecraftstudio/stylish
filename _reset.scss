@@ -1,11 +1,8 @@
 $-box-sizing: border-box;
 $-scroll-behavior: smooth;
 
-@mixin -unset {
-  all: unset;
-  box-sizing: $-box-sizing;
-}
 
+//region Mixins
 @mixin button {
   appearance: none;
   border: none;
@@ -45,10 +42,30 @@ $-scroll-behavior: smooth;
   border-radius: 0;
   min-width: 0;
 }
+//endregion Mixins
 
 
-@mixin styles() {
-  @mixin -typography {
+//region Classes
+@mixin classes {
+  @at-root button.no-style {
+    @include button;
+  }
+  @at-root ul.no-style, ol.no-style {
+    @include list;
+  }
+  @at-root input.no-style, select.no-style {
+    @include form-control;
+  }
+  @at-root fieldset.no-style {
+    @include form-fieldset;
+  }
+}
+//endregion Classes
+
+
+//region Rules
+@mixin -typography {
+  @at-root html {
     a:any-link {
       text-decoration: none;
       color: inherit;
@@ -59,7 +76,8 @@ $-scroll-behavior: smooth;
       font-size: 0;
     }
   }
-
+}
+@mixin rules() {
   // Required to get a higher specificity than UA stylesheets.
   // Authors can override using `:root`.
   @at-root html {
@@ -81,6 +99,8 @@ $-scroll-behavior: smooth;
       outline: none;
     }
 
-    @include -typography;
   }
+
+  @include -typography;
 }
+//endregion Rules

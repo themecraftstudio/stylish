@@ -1,3 +1,13 @@
-.pnpm-debug.log
-.DS_Store
 *.css
+
+# Package managers
+node_modules
+.pnpm-debug.log
+
+# Editors
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

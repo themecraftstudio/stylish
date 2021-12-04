@@ -27,16 +27,4 @@
   @at-root body.noscroll {
     overflow: hidden !important;
   }
-  @at-root button.no-style {
-    @include reset.button;
-  }
-  @at-root ul.no-style, ol.no-style {
-    @include reset.list;
-  }
-  @at-root input.no-style, select.no-style {
-    @include reset.form-control;
-  }
-  @at-root fieldset.no-style {
-    @include reset.form-fieldset;
-  }
 }

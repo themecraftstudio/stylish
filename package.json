@@ -4,9 +4,7 @@
   "author": "Ettore Del Negro <ettore@themecraft.studio> (https://themecraft.studio)",
   "license": "Unlicense",
   "repository": "git://github.com/themecraftstudio/stylish",
-  "browserslist": [
-    "defaults"
-  ],
+  "type": "module",
   "devDependencies": {
     "sass": "^1.44.0"
   },

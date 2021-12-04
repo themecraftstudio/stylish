@@ -1,7 +1,7 @@
 Stylish
 ===============================
 
-Modular and minimalist SCSS toolkit for vanilla CSS development.
+Modular and minimalist SCSS toolkit empowering vanilla CSS development.
 
 ## Usage
 
@@ -17,6 +17,9 @@ or
 @use './path/to/node_modules/stylish/reset';
 @use './path/to/node_modules/stylish/device';
 ```
+
+You'll likely want to include classes and rules defined by this module in your above-the-fold stylesheets. 
+
 
 ### Reset
 TODO document mixins, functions, variables
