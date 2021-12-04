@@ -3,15 +3,15 @@ Stylish
 
 Modular and minimalist SCSS toolkit vanilla CSS development.
 
-### Usage
+## Usage
 
-```sass
+```scss
 @use './path/to/node_modules/stylish' as util;
 ```
 
 or
 
-```sass
+```scss
 @use './path/to/node_modules/stylish/reset';
 @use './path/to/node_modules/stylish/device';
 ```
