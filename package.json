@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Ettore Del Negro <ettore@themecraft.studio> (https://themecraft.studio)",
   "license": "Unlicense",
-  "repository": "github:themecraftstudio/stylish",
+  "repository": "git://github.com/themecraftstudio/stylish",
   "browserslist": [
     "defaults"
   ],
