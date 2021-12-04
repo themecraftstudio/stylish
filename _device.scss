@@ -1,0 +1,17 @@
+/*
+ * Used to detect when :hover does not override tap events on the same element.
+ */
+@mixin hoverable {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin not-hoverable {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+$visualviewport-height: var(--visualviewport-height, var(--visualviewport-initial-height, 100vh));
+$visualviewport-width: var(--visualviewport-width, var(--visualviewport-initial-width, 100vw));

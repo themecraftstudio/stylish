@@ -1,0 +1,21 @@
+@use 'sass:meta';
+
+@mixin show-outline($color: cornflowerblue) {
+  @include wip {
+    outline: 1px dashed $color;
+  }
+}
+
+@mixin show-background($color: gainsboro) {
+  @include wip {
+    background-color: $color;
+  }
+}
+
+@mixin wip {
+  @if meta.function-exists('isWip') {
+    @if meta.call(meta.get-function('isWip')) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "@themecraftstudio/css-utilities",
+  "version": "1.0.0",
+  "module": "index.js",
+  "author": "Ettore Del Negro <ettore@themecraft.studio> (https://themecraft.studio)",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "watch": "concurrently 'npm:styles:watch' 'npm:scripts:watch'",
+    "build": "pnpm run styles && pnpm run scripts",
+    "styles": "gulp styles",
+    "styles:watch": "gulp watchStyles",
+    "scripts": "rm -f assets/_chunk-*.js; rollup --config scripts/rollup.config.js",
+    "scripts:watch": "rollup --watch --config scripts/rollup.config.js",
+    "theme:deploy": "theme deploy --allow-live",
+    "theme:deploy:production": "theme deploy --env production --nodelete --allow-live",
+    "theme:watch": "theme watch --allow-live --notify='http://localhost:35729/changed'"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.8",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/rellax": "^1.7.4",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^6.4.0",
+    "fancy-log": "^1.3.3",
+    "fast-glob": "^3.2.7",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.4",
+    "rollup": "^2.60.2",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.44.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@shopify/theme-currency": "^4.1.1",
+    "@shopify/theme-product": "^4.1.1",
+    "glightbox": "^3.1.0",
+    "graphql-hooks": "^5.5.0",
+    "i18nextify": "^3.0.2",
+    "preact": "^10.6.2",
+    "react-hook-form": "^7.20.5",
+    "rellax": "^1.12.1",
+    "swiper": "^7.3.1"
+  }
+}
