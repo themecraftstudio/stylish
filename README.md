@@ -5,6 +5,8 @@ Modular and minimalist SCSS toolkit for vanilla CSS development.
 
 ## Usage
 
+Configure your package manager to [use GitHub's npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package), then `@use` the module as you normally would:
+
 ```scss
 @use './path/to/node_modules/stylish' as util;
 ```
