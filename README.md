@@ -1,7 +1,7 @@
 Stylish
 ===============================
 
-Modular and minimalist SCSS toolkit vanilla CSS development.
+Modular and minimalist SCSS toolkit for vanilla CSS development.
 
 ## Usage
 

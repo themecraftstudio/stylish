@@ -47,10 +47,8 @@ $-scroll-behavior: smooth;
 }
 
 
-/* Typography */
-@mixin -typography {
-  @at-root html { // Required to get a higher specificity than UA stylesheets
-
+@mixin styles() {
+  @mixin -typography {
     a:any-link {
       text-decoration: none;
       color: inherit;
@@ -61,11 +59,10 @@ $-scroll-behavior: smooth;
       font-size: 0;
     }
   }
-}
 
-@mixin styles() {
-  @at-root html { // Required to get a higher specificity than UA stylesheets
-
+  // Required to get a higher specificity than UA stylesheets.
+  // Authors can override using `:root`.
+  @at-root html {
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 
@@ -75,29 +72,15 @@ $-scroll-behavior: smooth;
       //scroll-behavior: $-scroll-behavior;
     }
 
-    /* Images */
     figure {
       margin: 0;
       padding: 0;
     }
 
-    //picture {
-    //  all: initial;
-    //  box-sizing: inherit;
-    //}
-
-    /* Anchors */
-
-    /* Buttons */
-    //button {
-    //  @include -unset;
-    //  cursor: pointer;
-    //}
-
     video:focus-within {
       outline: none;
     }
-  }
 
-  @include -typography; // Avoids reset from all: initial
+    @include -typography;
+  }
 }
