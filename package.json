@@ -1,7 +1,7 @@
 {
   "name": "@themecraftstudio/stylish",
   "version": "0.1.0",
-  "author": "Ettore Del Negro <ettore@themecraft.studio> (https://themecraft.studio)",
+  "author": "Ettore Del Negro",
   "license": "Unlicense",
   "repository": "git://github.com/themecraftstudio/stylish",
   "registry":"https://npm.pkg.github.com",
