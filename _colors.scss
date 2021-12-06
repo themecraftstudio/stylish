@@ -3,9 +3,12 @@
 $colors: () !default;
 
 @mixin classes {
-  @each $color, $value in $colors {
-    .color-#{$color} {
-      color: $value;
+  @each $name, $value in $colors {
+    .color-#{$name} {
+      color: $value !important;
+    }
+    .background-color-#{$name} {
+      background-color: $value !important;
     }
   }
 }
@@ -20,4 +23,9 @@ $colors: () !default;
 
 @function color($color) {
   @return map.get($colors, $color);
+}
+
+@mixin styles {
+  @include classes;
+  @include rules;
 }

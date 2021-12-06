@@ -1,5 +1,5 @@
-$-box-sizing: border-box;
-$-scroll-behavior: smooth;
+$box-sizing: border-box !default;
+$scroll-behavior: smooth !default;
 
 
 //region Mixins
@@ -92,8 +92,8 @@ $-scroll-behavior: smooth;
 
     &, *, *::before, *::after {
       margin: 0;
-      box-sizing: $-box-sizing;
-      //scroll-behavior: $-scroll-behavior;
+      box-sizing: $box-sizing;
+      scroll-behavior: $scroll-behavior;
     }
 
     figure {
@@ -110,3 +110,8 @@ $-scroll-behavior: smooth;
   @include -typography;
 }
 //endregion Rules
+
+@mixin styles {
+  @include classes;
+  @include rules;
+}
