@@ -1,0 +1,23 @@
+@use 'sass:map';
+
+$colors: () !default;
+
+@mixin classes {
+  @each $color, $value in $colors {
+    .color-#{$color} {
+      color: $value;
+    }
+  }
+}
+
+@mixin rules {
+  @at-root html {
+    @each $color, $value in $colors {
+      --color-#{$color}: #{$value};
+    }
+  }
+}
+
+@function color($color) {
+  @return map.get($colors, $color);
+}

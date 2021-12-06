@@ -41,6 +41,10 @@ $-scroll-behavior: smooth;
   border: none;
   border-radius: 0;
   min-width: 0;
+
+  &[type=number] {
+    -moz-appearance: textfield
+  }
 }
 //endregion Mixins
 

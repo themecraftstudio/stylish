@@ -21,6 +21,31 @@ or
 You'll likely want to include classes and rules defined by this module in your above-the-fold stylesheets. 
 
 
+### Colors
+
+Define your color palette as variables in a module:
+```scss
+// ui/_colors.scss
+$red: #d6001c;
+$brown: #3a2c24;
+```
+Then pass them to `stylish/colors` as such:
+```scss
+// main.scss
+@use 'ui/colors' as colors;
+@use 'sass:meta';
+@use './path/to/node_modules/stylish' as color-helper with (
+  $colors: meta.module-variables('colors'),
+);
+
+@include color-helper.classes;
+@include color-helper.rules;
+```
+
+The `classes` mixin generates color classes using the pattern `color-<name>`, 
+whereas the `rules` mixin adds CSS custom properties named `--color-<name>` to the document element (`html`).
+This allows you to override these custom properties through the higher specificity `:root` pseudo-class.
+
 ### Reset
 TODO document mixins, functions, variables
 
