@@ -13,6 +13,7 @@ $scroll-behavior: smooth !default;
     size: unset;
   }
   color: unset;
+  text-transform: unset;
 
   &:not([disabled]) {
     cursor: pointer;
