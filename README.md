@@ -1,5 +1,5 @@
 Stylish
-==============================
+===========================
 
 Modular and minimalist SCSS toolkit empowering vanilla CSS development.
 
