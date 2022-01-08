@@ -8,14 +8,14 @@ Modular and minimalist SCSS toolkit empowering vanilla CSS development.
 Configure your package manager to [use GitHub's npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package), then `@use` the module as you normally would:
 
 ```scss
-@use './path/to/node_modules/stylish' as util;
+@use './path/to/node_modules/@themecraftstudio/stylish' as util;
 ```
 
 or
 
 ```scss
-@use './path/to/node_modules/stylish/reset';
-@use './path/to/node_modules/stylish/device';
+@use './path/to/node_modules/@themecraftstudio/stylish/reset';
+@use './path/to/node_modules/@themecraftstudio/stylish/device';
 ```
 
 You'll likely want to include classes and rules defined by this module in your above-the-fold stylesheets. 
@@ -34,7 +34,7 @@ Then pass them to `stylish/colors` as such:
 // main.scss
 @use 'ui/colors' as colors;
 @use 'sass:meta';
-@use './path/to/node_modules/stylish' as color-helper with (
+@use './path/to/node_modules/@themecraftstudio/stylish' as color-helper with (
   $colors: meta.module-variables('colors'),
 );
 
