@@ -44,7 +44,12 @@ $scroll-behavior: smooth !default;
   min-width: 0;
 
   &[type=number] {
-    -moz-appearance: textfield
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 }
 //endregion Mixins
