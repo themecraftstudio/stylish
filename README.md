@@ -34,7 +34,7 @@ Then pass them to `stylish/colors` as such:
 // main.scss
 @use 'ui/colors' as colors;
 @use 'sass:meta';
-@use './path/to/node_modules/@themecraftstudio/stylish' as color-helper with (
+@use './path/to/node_modules/@themecraftstudio/stylish/colors' as color-helper with (
   $colors: meta.module-variables('colors'),
 );
 
@@ -47,7 +47,12 @@ whereas the `rules` mixin adds CSS custom properties named `--color-<name>` to t
 This allows you to override these custom properties through the higher specificity `:root` pseudo-class.
 
 ### Reset
-TODO document mixins, functions, variables
+
+```scss
+@use './path/to/node_modules/@themecraftstudio/stylish/reset';
+
+@include reset.styles;
+```
 
 ### Device
 TODO document mixins, functions, variables
