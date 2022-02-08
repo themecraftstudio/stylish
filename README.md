@@ -34,7 +34,7 @@ Then pass them to `stylish/colors` as such:
 // main.scss
 @use 'ui/colors' as colors;
 @use 'sass:meta';
-@use './path/to/node_modules/@themecraftstudio/stylish' as color-helper with (
+@use './path/to/node_modules/@themecraftstudio/stylish/colors' as color-helper with (
   $colors: meta.module-variables('colors'),
 );
 
