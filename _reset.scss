@@ -29,7 +29,7 @@ $scroll-behavior: smooth !default;
   padding: 0;
   border: none;
 }
-@mixin form-control {
+@mixin form-control($keep-number-spinner: false) {
   appearance: none;
   font: {
     size: unset;
@@ -43,12 +43,14 @@ $scroll-behavior: smooth !default;
   border-radius: 0;
   min-width: 0;
 
-  &[type=number] {
-    -moz-appearance: textfield;
+  @if not $keep-number-spinner {
+    &[type=number] {
+      -moz-appearance: textfield;
 
-    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+      &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
 }
