@@ -1,17 +1,22 @@
 $box-sizing: border-box !default;
 $scroll-behavior: smooth !default;
 
+@mixin -font-unset {
+  font: {
+    family: unset;
+    size: unset;
+    weight: unset;
+  }
+}
 
 //region Mixins
 @mixin button {
+  @include -font-unset;
+
   appearance: none;
   border: none;
   padding: 0;
   background: none;
-  font: {
-    family: unset;
-    size: unset;
-  }
   color: unset;
   text-transform: unset;
 
@@ -30,11 +35,9 @@ $scroll-behavior: smooth !default;
   border: none;
 }
 @mixin form-control($keep-number-spinner: false) {
+  @include -font-unset;
+
   appearance: none;
-  font: {
-    size: unset;
-    family: unset;
-  }
   line-height: unset;
   color: unset;
   background-color: unset;
