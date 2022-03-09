@@ -25,4 +25,16 @@
   @at-root body.no-scroll {
     overflow: hidden !important;
   }
+
+  .hide-for-first-paint {
+    display: none;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
 }

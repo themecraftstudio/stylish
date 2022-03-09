@@ -20,7 +20,7 @@ $scroll-behavior: smooth !default;
   color: unset;
   text-transform: unset;
 
-  &:not([disabled]) {
+  &:not([disabled]):hover {
     cursor: pointer;
   }
 }
