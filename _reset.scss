@@ -10,6 +10,13 @@ $scroll-behavior: smooth !default;
 }
 
 //region Mixins
+@mixin anchor() {
+  &:any-link {
+    text-decoration: none;
+    color: unset;
+  }
+}
+
 @mixin button {
   @include -font-unset;
 
@@ -63,16 +70,31 @@ $scroll-behavior: smooth !default;
 //region Classes
 @mixin classes {
   @at-root {
-    button:is(.no-style, .unstyle) {
+    a.unstyle {
+      @include anchor;
+    }
+
+    button.no-style, /* deprecated */
+    button.unstyle
+    {
       @include button;
     }
-    :is(ul, ol):is(.no-style, .unstyle) {
+
+    ul.no-style, ol.no-style, /* deprecated */
+    :is(ul, ol).unstyle /* Safari 14+ */
+    {
       @include list;
     }
-    :is(input, select):is(.no-style, .unstyle) {
+
+    input.no-style, select.no-style, /* deprecated */
+    :is(input, select).unstyle /* Safari 14+ */
+    {
       @include form-control;
     }
-    fieldset:is(.no-style, .unstyle) {
+
+    fieldset.no-style, /* deprecated */
+    fieldset.unstyle
+    {
       @include form-fieldset;
     }
   }
@@ -81,19 +103,6 @@ $scroll-behavior: smooth !default;
 
 
 //region Rules
-@mixin -typography {
-  @at-root html {
-    a:any-link {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    picture {
-      line-height: 0;
-      font-size: 0;
-    }
-  }
-}
 @mixin rules() {
   // Required to get a higher specificity than UA stylesheets.
   // Authors can override using `:root`.
@@ -107,18 +116,24 @@ $scroll-behavior: smooth !default;
       scroll-behavior: $scroll-behavior;
     }
 
+    a {
+      @include anchor();
+    }
+
     figure {
       margin: 0;
       padding: 0;
     }
 
+    picture {
+      line-height: 0;
+      font-size: 0;
+    }
+
     video:focus-within {
       outline: none;
     }
-
   }
-
-  @include -typography;
 }
 //endregion Rules
 
