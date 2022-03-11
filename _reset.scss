@@ -63,16 +63,16 @@ $scroll-behavior: smooth !default;
 //region Classes
 @mixin classes {
   @at-root {
-    button.no-style {
+    button:is(.no-style, .unstyle) {
       @include button;
     }
-    ul.no-style, ol.no-style {
+    :is(ul, ol):is(.no-style, .unstyle) {
       @include list;
     }
-    input.no-style, select.no-style {
+    :is(input, select):is(.no-style, .unstyle) {
       @include form-control;
     }
-    fieldset.no-style {
+    fieldset:is(.no-style, .unstyle) {
       @include form-fieldset;
     }
   }
