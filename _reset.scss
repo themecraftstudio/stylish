@@ -10,13 +10,6 @@ $scroll-behavior: smooth !default;
 }
 
 //region Mixins
-@mixin anchor() {
-  &:any-link {
-    text-decoration: none;
-    color: unset;
-  }
-}
-
 @mixin button {
   @include -font-unset;
 
@@ -74,10 +67,6 @@ $scroll-behavior: smooth !default;
 //region Classes
 @mixin classes {
   @at-root {
-    a.unstyle {
-      @include anchor;
-    }
-
     button.no-style, /* deprecated */
     button.unstyle
     {
@@ -108,8 +97,9 @@ $scroll-behavior: smooth !default;
 
 //region Rules
 @mixin rules() {
-  // Required to get a higher specificity than UA stylesheets.
+  // Ensures higher specificity than UA stylesheets.
   // Authors can override using `:root`.
+  // TODO 03/2022: this should not be needed because the embedding stylesheet already has higher specificity in the cascade
   @at-root html {
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -120,8 +110,9 @@ $scroll-behavior: smooth !default;
       scroll-behavior: $scroll-behavior;
     }
 
-    a {
-      @include anchor();
+    a:any-link { // :link or :visited that has [href]
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     figure {
