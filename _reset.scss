@@ -104,7 +104,7 @@ $scroll-behavior: smooth !default;
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 
-    &, *, *::before, *::after {
+    &, *, *::before, *::after { // Universal selector '*' has no effect on specificity
       margin: 0;
       box-sizing: $box-sizing;
       scroll-behavior: $scroll-behavior;
@@ -112,7 +112,7 @@ $scroll-behavior: smooth !default;
 
     a:any-link { // :link or :visited that has [href]
       outline: none;
-      -webkit-tap-highlight-color: transparent;
+      // -webkit-tap-highlight-color: transparent;
     }
 
     figure {
