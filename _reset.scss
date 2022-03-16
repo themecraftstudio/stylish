@@ -19,6 +19,7 @@ $scroll-behavior: smooth !default;
   background: none;
   color: unset;
   text-transform: unset;
+  -webkit-tap-highlight-color: transparent;
 
   &[disabled] {
     cursor: not-allowed;
@@ -102,7 +103,7 @@ $scroll-behavior: smooth !default;
   // TODO 03/2022: this should not be needed because the embedding stylesheet already has higher specificity in the cascade
   @at-root html {
     text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
+    // -webkit-tap-highlight-color: transparent;
 
     &, *, *::before, *::after { // Universal selector '*' has no effect on specificity
       margin: 0;
@@ -112,7 +113,7 @@ $scroll-behavior: smooth !default;
 
     a:any-link { // :link or :visited that has [href]
       outline: none;
-      // -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: transparent;
     }
 
     figure {
