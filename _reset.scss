@@ -7,9 +7,19 @@ $scroll-behavior: smooth !default;
     size: unset;
     weight: unset;
   }
+  color: unset;
 }
 
 //region Mixins
+
+// Meant to be used on a:any-link
+@mixin link {
+  @include -font-unset;
+
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 @mixin button {
   @include -font-unset;
 
@@ -17,7 +27,6 @@ $scroll-behavior: smooth !default;
   border: none;
   padding: 0;
   background: none;
-  color: unset;
   text-transform: unset;
   -webkit-tap-highlight-color: transparent;
 
@@ -44,7 +53,6 @@ $scroll-behavior: smooth !default;
 
   appearance: none;
   line-height: unset;
-  color: unset;
   background-color: unset;
   outline: none;
   border: none;
