@@ -58,6 +58,11 @@ $scroll-behavior: smooth !default;
   border-radius: 0;
   min-width: 0;
 
+  &[disabled] {
+    opacity: 1; /* iOS Safari: prevents background-color transparency */
+    //-webkit-text-fill-color: currentColor; /* iOS Safari */
+  }
+
   @if not $keep-number-spinner {
     &[type=number] {
       -moz-appearance: textfield;
