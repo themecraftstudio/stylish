@@ -59,8 +59,8 @@ $scroll-behavior: smooth !default;
   min-width: 0;
 
   &[disabled] {
+    -webkit-text-fill-color: currentcolor; /* iOS Safari */
     opacity: 1; /* iOS Safari: prevents background-color transparency */
-    -webkit-text-fill-color: currentColor; /* iOS Safari */
   }
 
   @if not $keep-number-spinner {
