@@ -81,20 +81,24 @@ $scroll-behavior: smooth !default;
       @include button;
     }
 
-    ul.no-style, ol.no-style, /* deprecated */
+    ul.no-style, ol.no-style, ul.unstyle, ol.unstyle { /* deprecated */
+      @include list;
+    }
     :is(ul, ol).unstyle /* Safari 14+ */
     {
       @include list;
     }
 
-    input.no-style, select.no-style, /* deprecated */
+    input.no-style, select.no-style, input.unstyle, select.unstyle { /* deprecated */
+      @include form-control;
+    }
     :is(input, select).unstyle /* Safari 14+ */
     {
       @include form-control;
     }
 
     fieldset.no-style, /* deprecated */
-    fieldset.unstyle
+    fieldset.unstyle 
     {
       @include form-fieldset;
     }
