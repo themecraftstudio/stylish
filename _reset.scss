@@ -60,7 +60,7 @@ $scroll-behavior: smooth !default;
 
   &[disabled] {
     opacity: 1; /* iOS Safari: prevents background-color transparency */
-    //-webkit-text-fill-color: currentColor; /* iOS Safari */
+    -webkit-text-fill-color: currentColor; /* iOS Safari */
   }
 
   @if not $keep-number-spinner {
