@@ -1,12 +1,12 @@
 {
   "name": "@themecraftstudio/stylish",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "author": "Ettore Del Negro",
   "license": "Unlicense",
   "repository": "git://github.com/themecraftstudio/stylish",
   "registry": "https://npm.pkg.github.com",
   "type": "module",
   "devDependencies": {
-    "sass": "^1.49.8"
+    "sass": "^1.52.0"
   }
 }
