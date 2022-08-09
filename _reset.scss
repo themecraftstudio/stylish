@@ -89,7 +89,7 @@ $scroll-behavior: smooth !default;
     ul.no-style, ol.no-style, ul.unstyle, ol.unstyle { /* deprecated */
       @include list;
     }
-    :is(ul, ol).unstyle /* Safari 14+ */
+    :where(ul, ol).unstyle /* Safari 14+ */
     {
       @include list;
     }
@@ -97,7 +97,7 @@ $scroll-behavior: smooth !default;
     input.no-style, select.no-style, input.unstyle, select.unstyle { /* deprecated */
       @include form-control;
     }
-    :is(input, select).unstyle /* Safari 14+ */
+    :where(input, select).unstyle /* Safari 14+ */
     {
       @include form-control;
     }

@@ -21,7 +21,7 @@
 @mixin classes {
   @at-root 
   body.no-scroll, body.noscroll, /* deprectated */
-  body:is(.no-scroll, .noscroll) /* Safari 14+ */
+  body:where(.no-scroll, .noscroll) /* Safari 14+ */
   {
     overflow: hidden !important;
   }
