@@ -4,7 +4,7 @@
   "author": "Ettore Del Negro",
   "license": "Unlicense",
   "repository": "git://github.com/themecraftstudio/stylish",
-  "registry": "https://npm.pkg.github.com",
+  "registry": "https://registry.npmjs.org/",
   "type": "module",
   "devDependencies": {
     "sass": "^1.52.0"
