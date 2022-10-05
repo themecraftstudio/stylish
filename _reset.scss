@@ -12,6 +12,11 @@ $scroll-behavior: smooth !default;
 
 //region Mixins
 
+@mixin picture {
+  line-height: 0;
+  font-size: 0;
+}
+
 // Meant to be used on a:any-link
 @mixin link {
   color: unset;
@@ -80,32 +85,28 @@ $scroll-behavior: smooth !default;
 //region Classes
 @mixin classes {
   @at-root {
-    button.no-style, /* deprecated */
     button.unstyle
     {
       @include button;
     }
 
-    ul.no-style, ol.no-style, ul.unstyle, ol.unstyle { /* deprecated */
-      @include list;
-    }
     :where(ul, ol).unstyle /* Safari 14+ */
     {
       @include list;
     }
 
-    input.no-style, select.no-style, input.unstyle, select.unstyle { /* deprecated */
-      @include form-control;
-    }
     :where(input, select).unstyle /* Safari 14+ */
     {
       @include form-control;
     }
 
-    fieldset.no-style, /* deprecated */
     fieldset.unstyle 
     {
       @include form-fieldset;
+    }
+
+    picture.unstyle {
+      @include picture;
     }
   }
 }
@@ -114,9 +115,6 @@ $scroll-behavior: smooth !default;
 
 //region Rules
 @mixin rules() {
-  // Ensures higher specificity than UA stylesheets.
-  // Authors can override using `:root`.
-  // TODO 03/2022: this should not be needed because the embedding stylesheet already has higher specificity in the cascade
   @at-root html {
     text-size-adjust: none;
 
@@ -137,8 +135,7 @@ $scroll-behavior: smooth !default;
     }
 
     picture {
-      line-height: 0;
-      font-size: 0;
+      @include picture;
     }
 
     video:focus-within {

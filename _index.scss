@@ -19,8 +19,6 @@
  * Various utility classes.
  */
 @mixin classes {
-  @at-root 
-  body.no-scroll, body.noscroll, /* deprectated */
   body:where(.no-scroll, .noscroll) /* Safari 14+ */
   {
     overflow: hidden !important;
