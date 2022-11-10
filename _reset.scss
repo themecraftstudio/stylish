@@ -12,6 +12,10 @@ $scroll-behavior: smooth !default;
 
 //region Mixins
 
+@mixin figure {
+  margin: 0;
+  padding: 0;
+}
 @mixin picture {
   line-height: 0;
   font-size: 0;
@@ -130,8 +134,7 @@ $scroll-behavior: smooth !default;
     }
 
     figure {
-      margin: 0;
-      padding: 0;
+      @include figure;
     }
 
     picture {
