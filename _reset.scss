@@ -89,6 +89,9 @@ $scroll-behavior: smooth !default;
 //region Classes
 @mixin classes {
   @at-root {
+    a:any-link.unstyle {
+      @include link;
+    }
     button.unstyle
     {
       @include button;
